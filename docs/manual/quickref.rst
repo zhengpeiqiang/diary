@@ -16,3 +16,9 @@ MSPM0系列教程
 * `MSPM0L1306开发板教程7 - DMA <https://wengexin.com/tipsinfo?id=2632>`_ 
 * `MSPM0L1306开发板教程8 - ADC <https://wengexin.com/tipsinfo?id=2633>`_ 
 
+CYZ-MSPM0L1306-MiniEVB核心板
+-----------------------------
+
+* `MSPM0L130x混合信号微控制器-数据表 <https://oss.emakerzone.com/cyzEasySelectionNew/TI/TI-MSPM0L1306.pdf>`_ (PDF)
+* `CYZ-MSPM0L1306-MiniEVB用户指南 <https://oss.emakerzone.com/cyz_admin/1679884977958.pdf>`_ (PDF)
+* `CYZ-MSPM0L1306-MiniEVB原理图 <https://oss.emakerzone.com/cyz_admin/1680580555155.pdf>`_ (PDF)
