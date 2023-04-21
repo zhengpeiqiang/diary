@@ -6,9 +6,9 @@ pyCar用户手册
 测试文章1
 ------------
 
-.. 文章:: MSPM0应用指南合集
+.. class:: MSPM0应用指南合集
 
-    https://wengexin.com/tipsinfo?id=2639
+    .. _reference: https://wengexin.com/tipsinfo?id=2639
 
 硬件资源
 ---------
