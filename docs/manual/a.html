@@ -1,0 +1,151 @@
+<div class="ant-row" data-v-8c1715de="" style="flex-wrap: nowrap; row-gap: 0px;">
+    <div class="ant-col ant-col-18 tipsLeftBox mr-15" data-v-8c1715de="">
+        <div class="tipspreviewBox_title_cent_l position-re" data-v-8c1715de="">
+            <h1 class="fontsize-22 col-000 anim_medium mb-20" data-v-8c1715de=""><span
+                    class="jx_span fontsize-12 col-fff" data-v-8c1715de="">精选</span> MSPM0应用指南合集</h1>
+            <h1 class="fontsize-12 col-b2 anim_regular" data-v-8c1715de=""><span data-v-8c1715de=""><span
+                        class="col-7f mr-20" data-v-8c1715de=""> 作者:问个芯小助手 <span class="ml-30"
+                            data-v-8c1715de="">未经作者授权，禁止转载</span></span></span><span class="fr" data-v-8c1715de="">1 收藏
+                </span><span class="fr mr-20" data-v-8c1715de="">1 赞 </span><span class="fr mr-20" data-v-8c1715de="">96
+                    阅读 </span></h1>
+        </div>
+        <div class="tipstop_summary" data-v-8c1715de="">
+            <p class="fontsize-16 col-333 anim_medium wo" data-v-8c1715de="">本文总结归纳了MSPM0的一些应用指南，希望给到工程师朋友们一定的帮助。</p>
+        </div>
+        <div class="col-444 fontsize-17 anim_regular showhtml" data-v-8c1715de="">
+            <div data-v-8c1715de="">
+                <h1 id="cedog">
+                    <p><b>
+                            <font size="3">1. 5V 接口</font>
+                        </b></p>
+                </h1>
+                <div><span style="font-size: 16px; text-indent: inherit;">该示例演示了如何使用 MSPM0 器件上的漏极开路 IO (ODIO)与高达 5V
+                        的信号进行连接。通过使用外部上拉电阻器，开漏 IO 允许在高于 MSPM0 VDD 电源电压的电压电平下跨多个电压域进行通信。</span><b>
+                        <font size="2"><br></font>
+                    </b></div>
+                <div><span style="font-size: 16px; text-indent: inherit;"><br></span></div>
+                <div><span style="font-size: 16px; text-indent: inherit;">点击下方链接查看：</span></div>
+                <div><a href="https://oss.emakerzone.com/tips/zhcacb5.pdf" target="_blank"
+                        style="background-color: rgb(255, 255, 255);">https://oss.emakerzone.com/tips/zhcacb5.pdf</a>
+                </div>
+                <p><br></p>
+                <h1 id="jctcz">
+                    <p><b>
+                            <font size="3">2.&nbsp;具有 PWM 功能的 LED 驱动器</font>
+                        </b></p>
+                </h1>
+                <div><span style="font-size: 16px; text-indent: inherit;">PWM 占空比与 LED 的亮度直接相关。在应用中使用 LED 作为指示灯或光源时，可以使用
+                        PWM 信号来驱动 LED 亮度和功耗。MPSM0 中的计时器模块可用于生成具有不同频率和占空比的 PWM 信号。该示例代码以心跳方式调暗和调亮 LED，以显示可用于驱动 LED 的整个
+                        PWM 占空比范围。</span></div>
+                <div><span style="font-size: 16px; text-indent: inherit;"><br></span></div>
+                <div></div>
+                <div>
+                    <p>点击下方链接查看：</p>
+                    <p><a href="https://oss.emakerzone.com/tips/zhcacb7.pdf" target="_blank"
+                            style="text-indent: inherit; background-color: rgb(255, 255, 255); font-size: 17px;">https://oss.emakerzone.com/tips/zhcacb7.pdf</a>
+                    </p>
+                    <p><br></p>
+                    <h1>
+                        <p><b>
+                                <font size="3">3.&nbsp;动态可编程增益放大器</font>
+                            </b></p>
+                    </h1>
+                    <p>该子系统演示了如何在可编程增益放大器 (PGA) 配置中设置 MSPM0 内部运算放大器，动态更改增益，输出放大
+                        的信号以及使用 ADC 读取结果。该配置使用户能够使用具有高增益的小输入电压信号极大地提高分辨率，但随后
+                        仍然能够通过更改为较低的增益来对较大的信号进行采样。</p>
+                    <p><br></p>
+                    <p>点击下方链接查看：</p>
+                    <p><a href="https://oss.emakerzone.com/tips/zhcacb6.pdf"
+                            target="_blank">https://oss.emakerzone.com/tips/zhcacb6.pdf</a><br></p>
+                    <p><br></p>
+                    <h1>
+                        <p><b>
+                                <font size="3">4.&nbsp;用于 ADC 的 DMA 乒乓</font>
+                            </b></p>
+                    </h1>
+                    <p>用于 ADC 的 DMA 乒乓示例演示了如何使用 DMA 在两个不同的缓冲区之间传输 ADC 数据，这也称为 DMA“乒
+                        乓”。DMA 乒乓通常用于将数据传输到一个缓冲器，同时 CPU 使用另一个缓冲器。如图 1 所示，蓝色路径显示
+                        DMA 将数据传输到缓冲区 1，CPU 从缓冲区 2 获取数据。当路径切换时，DMA 将数据传输到缓冲区 2，CPU 从
+                        缓冲区 1 获取数据。这种技术的好处是整个应用程序的运行时更短，因为 CPU 在任何时候都可以自由地对一部分
+                        数据进行操作。在该示例中，ADC 配置为单次转换模式，DMA 和 CPU 将在每次转换后在缓冲区之间切换。</p>
+                    <p><br></p>
+                    <p>点击下方链接查看：</p>
+                    <p><a href="https://oss.emakerzone.com/tips/zhcacb4.pdf"
+                            target="_blank">https://oss.emakerzone.com/tips/zhcacb4.pdf</a><br></p>
+                    <p><br></p>
+                    <h1>
+                        <p><b>
+                                <font size="3">5.&nbsp;热敏电阻温度检测</font>
+                            </b></p>
+                    </h1>
+                    <p>该子系统使用与正温度系数 (PTC) 热敏电阻 (TMP61) 串联的电阻器构成分压器，从而产生随温度呈线性变化的输
+                        出电压。通过在缓冲器配置中设置 MSPM0 内部运算放大器并使用 ADC 进行采样来读取该外部电路。如果测量到
+                        温度升高，RGB LED 将变为红色；如果温度降低，LED 将变为蓝色；如果温度没有显著变化，LED 将保持绿
+                        色。本文档不详细介绍如何根据 ADC 读数计算温度值，因为此类计算取决于所选的热敏电阻。</p>
+                    <p><br></p>
+                    <p>点击下方链接查看：</p>
+                    <p><a href="https://oss.emakerzone.com/tips/zhcaca8.pdf"
+                            target="_blank">https://oss.emakerzone.com/tips/zhcaca8.pdf</a><br></p>
+                    <p><br></p>
+                    <h1>
+                        <p><b>
+                                <font size="3">6.&nbsp;跨阻放大器</font>
+                            </b></p>
+                    </h1>
+                    <p>该子系统演示了如何将 MSPM0 内部运算放大器设置为跨阻放大器 (TIA) 配置并使用内部 ADC 读取输出。跨阻运
+                        算放大器电路可以将输入电流源转换为输出电压。电流到电压的增益基于反馈电阻。</p>
+                    <p><br></p>
+                    <p>点击下方链接查看：</p>
+                    <p><a href="https://oss.emakerzone.com/tips/zhcaca9.pdf"
+                            target="_blank">https://oss.emakerzone.com/tips/zhcaca9.pdf</a><br></p>
+                    <p><br></p>
+                    <hr>
+                    <p><br></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ant-col ant-col-6" data-v-8c1715de="">
+        <div class="QABox_ad" data-v-8c1715de="" style="position: fixed; width: 315px;">
+            <div class="top" data-v-8c1715de="">
+                <p class="anim_regular fontsize-20 col-000" data-v-8c1715de="">大家常问</p>
+                <ul data-v-8c1715de="">
+                    <li class="ellipsis-1 col-333 fontsize-14 anim_regular" data-v-8c1715de="">
+                        兆易的GD32F103RCT6有没有极海半导体的芯片可以pin to pin替代，外设主要用到AD采样和485通讯</li>
+                    <li class="ellipsis-1 col-333 fontsize-14 anim_regular" data-v-8c1715de="">
+                        用ROHM的bm6241电机驱动芯片控制电机出现给电机拧一下电机才会转的问题怎么解决？</li>
+                    <li class="ellipsis-1 col-333 fontsize-14 anim_regular" data-v-8c1715de="">LTC2919有没有合适的型号可以替代的？
+                    </li>
+                    <li class="ellipsis-1 col-333 fontsize-14 anim_regular" data-v-8c1715de="">单片机上电不启动要重启一下才启动是什么原因？
+                    </li>
+                    <li class="ellipsis-1 col-333 fontsize-14 anim_regular" data-v-8c1715de="">
+                        使用了一款单片机APM32F072，发现当供电电源低于3.3V以后，AD得到的结果误差比较大，这个问题怎么解决呢？</li>
+                </ul>
+                <div class="anim_medium fontsize-13 col-333 cent" data-v-8c1715de=""><span
+                        data-v-8c1715de="">我有类似问题，立即获取解答</span><span class="openFaeBox" data-v-8c1715de="">立即咨询</span>
+                </div>
+            </div>
+            <div class="top mt-10" data-v-8c1715de="">
+                <p class="anim_regular fontsize-20 col-000" data-v-8c1715de="">智能选型工具</p>
+                <div class="ezslist" data-v-8c1715de="">
+                    <div class="col-444 anim_regular fontsize-14 bar" data-v-8c1715de="">通用MCU</div>
+                    <div class="col-444 anim_regular fontsize-14 bar" data-v-8c1715de="">氮化镓GaN</div>
+                    <div class="col-444 anim_regular fontsize-14 bar" data-v-8c1715de="">线性稳压器</div>
+                    <div class="col-444 anim_regular fontsize-14 bar" data-v-8c1715de="">运算放大器</div>
+                    <div class="col-444 anim_regular fontsize-14 bar" data-v-8c1715de="">数字隔离</div>
+                    <div class="col-444 anim_regular fontsize-14 bar" data-v-8c1715de="">无刷电机</div>
+                    <div class="col-444 anim_regular fontsize-14 bar" data-v-8c1715de="">温湿传感器</div>
+                </div>
+                <div class="anim_regular fontsize-13 col-333 cent" data-v-8c1715de=""><span
+                        data-v-8c1715de="">查看更多分类</span><span class="fontsize-12 col-b2" data-v-8c1715de="">多参数对比/资料下载<i
+                            class="iconfont icon-youjiantou-011 fontsize-12" data-v-8c1715de=""></i></span></div>
+            </div>
+            <div class="imglist" data-v-8c1715de=""><img src="https://oss.emakerzone.com/cyz_admin/1667354716760.png"
+                    data-v-8c1715de="" style="background-color: rgb(255, 255, 255);"></div>
+            <div class="imglist" data-v-8c1715de=""><img src="https://oss.emakerzone.com/cyz_admin/1672717637395.png"
+                    data-v-8c1715de="" style="background-color: rgb(255, 255, 255);"></div>
+            <div class="imglist" data-v-8c1715de=""><img src="https://oss.emakerzone.com/cyz_admin/1678695695933.png"
+                    data-v-8c1715de="" style="background-color: rgb(255, 255, 255);"></div>
+        </div>
+    </div>
+</div>
